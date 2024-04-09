@@ -1,0 +1,12 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cube {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
