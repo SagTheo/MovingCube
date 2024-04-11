@@ -1,31 +1,31 @@
 const cube = document.querySelector('.cube')
-let right = 0
-let left = 0
-let tops = 0
-let bottom = 0
+let x = 0
+let y = 0
 
 window.addEventListener('keydown', e => {
     if (e.code === 'ArrowRight') {
-        right += 10
+        x += 10
 
-        cube.style.transform = `translate(${right}px)`
+        cube.style.transform = `translate(${x}px)`
     }
 
     if (e.code === 'ArrowLeft') {
-        left += 10
+        x -= 10
 
-        cube.style.transform = `translate(-${left}px)`
+        cube.style.transform = `translate(${x}px)`
     }
 
     if (e.code === 'ArrowUp') {
-        tops += 10
+        y -= 10
 
-        cube.style.transform = `translate(0, -${tops}px)`
+        // needs more work
+        cube.style.transform = `translate(${x}, ${y}px)`
     }
 
     if (e.code === 'ArrowDown') {
-        bottom += 10
+        y += 10
 
-        cube.style.transform = `translate(0, ${bottom}px)`
+        // needs more work
+        cube.style.transform = `translate(${x}, ${y}px)`
     }
 })
