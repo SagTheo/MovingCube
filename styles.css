@@ -6,7 +6,13 @@ body {
 }
 
 .cube {
+    position: absolute;
     width: 30px;
     height: 30px;
     background-color: red;
+}
+
+.line {
+    width: 100vw;
+    border: 1px solid green;
 }
