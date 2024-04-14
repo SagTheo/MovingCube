@@ -1,9 +1,11 @@
 const cube = document.querySelector('.cube')
 const line = document.querySelector('.line')
+const counter = document.querySelector('#counter')
 const lineCoord = line.getBoundingClientRect()
 let x = 0
 let y = 0
 const step = 10
+let counterOutOfLine = 0
 
 const transform = (cube, x, y) => {
     cube.style.transform = `translate(${x}px, ${y}px)`
@@ -31,7 +33,8 @@ window.addEventListener('keydown', e => {
 
         setTimeout(() => {
             if (cubeCoord.top + 30 < lineCoord.top) {
-                alert('Out of line')
+                counterOutOfLine++
+                counter.innerHTML = counterOutOfLine
             }
         }, 100)
         
