@@ -32,17 +32,25 @@ window.addEventListener('keydown', e => {
         const cubeCoord = cube.getBoundingClientRect()
 
         setTimeout(() => {
-            if (cubeCoord.top + 30 < lineCoord.top) {
+            if (cubeCoord.bottom < lineCoord.top) {
                 counterOutOfLine++
                 counter.innerHTML = counterOutOfLine
-            }
+            } 
         }, 100)
-        
     }
 
     if (e.code === 'ArrowDown') {
         y += step
 
         transform(cube, x, y)
+
+        const cubeCoord = cube.getBoundingClientRect()
+
+        setTimeout(() => {  
+            if (cubeCoord.top > lineCoord.top) {
+                counterOutOfLine++
+                counter.innerHTML = counterOutOfLine
+            } 
+        }, 100)
     }
 })
